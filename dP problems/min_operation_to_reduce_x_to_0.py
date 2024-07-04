@@ -29,7 +29,7 @@ Constraints:
 1 <= nums[i] <= 104
 1 <= x <= 109
 '''
-
+#WA
 def count(nums,x,l,r,c):
         if x==0 : return count
         elif x<0 : return float('inf')

@@ -40,7 +40,8 @@ def longestPalindrome(s):
                 # case when i==j is already calculated to be True
                 '''
                 if j > i:
-                    '''# Case when two string is present, palindrome if both the trings are equal
+                    '''
+                    # Case when two string is present, palindrome if both the strings are equal
                     '''
                     if j - i == 1 and s[i] == s[j]:
                         dp[i][j] = True

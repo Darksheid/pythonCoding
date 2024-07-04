@@ -14,7 +14,7 @@ Example 2:
 Input: s = "abcd"
 Output: "dcbabcd"
 '''
-
+#WA
 def shortestPalindrome(s):
         f,l=0,len(s)-1
         while f<=l:
