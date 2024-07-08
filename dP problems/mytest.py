@@ -5,6 +5,33 @@ def hasDuplicates(nums):
     for i in s.values():
         if i > 1: return True
 
-nums=[4,5,6]
-for i,n in enumerate(nums):
-    print(i,n)
+
+
+
+
+def groupAnagrams(strs):
+        dp={}
+        for index,value in enumerate(strs):
+            key="".join(sorted(value))
+            if key in dp:
+                dp[key]= dp[key] +"#"+value
+            else:
+                dp[key] = value
+        arr=[]
+        for values in dp.values():
+            if "#" in values:
+                arr.append(values.split("#"))
+            else:
+                arr.append(values)
+        return arr
+
+
+strs = ["act","pots","tops","cat","stop","hat"]
+print(groupAnagrams(strs))
+
+
+
+
+
+
+
