@@ -29,9 +29,22 @@ Constraints:
 numbers is sorted in non-decreasing order.
 -1000 <= target <= 1000
 The tests are generated such that there is exactly one solution.
+
+Solution(Optimal O(n) time)
+lets take arr = [1,3,4,5,7,10,11] (already sorted in increasing order as in question)
+and target = 9
+if we take two pointer first , last  = 0 , n-1 index of array
+1>>now arr[first] + arr[last] =12> Target , in such case we cannot increase first, this will only increase the sum
+    thus last pointer to be decreased by 1
+2>>now arr[first] + arr[last] =11 > Target, last =last-1
+3>>arr[first] + arr[last] =8< target , in this case we have increase the sum, hence first = first +1
+4>>arr[first] + arr[last] =10> target , last-=1
+5>>arr[first] + arr[last] =8<target ,first+=1
+6>>arr[first] + arr[last] =9 , return [first+1,Last+1]
 '''
 
-def twoSum(numbers,target):
+
+def twoSum(numbers, target):
     n = len(numbers)
     f, l = 0, n - 1
     n = len(numbers)
@@ -43,14 +56,7 @@ def twoSum(numbers,target):
         else:
             l = l - 1
 
-numbers=[2,7,11,15]
-target=9
-print(twoSum(numbers,target))
 
-
-
-
-
-
-
-
+numbers = [2, 7, 11, 15]
+target = 9
+print(twoSum(numbers, target))
