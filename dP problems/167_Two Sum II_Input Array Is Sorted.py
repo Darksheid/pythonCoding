@@ -57,6 +57,9 @@ def twoSum(numbers, target):
             l = l - 1
 
 
-numbers = [2, 7, 11, 15]
+numbers = [1,3,4,5,7,10,11]
 target = 9
 print(twoSum(numbers, target))
+num=[-1,0,1,2,-1,4]
+
+print(sorted(num))
