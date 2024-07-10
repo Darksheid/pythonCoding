@@ -1,6 +1,6 @@
 '''
 15. 3Sum
-
+(please solve 1_TWO_SUM and 167_TWO SUM II problem)
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
 such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 Notice that the solution set must not contain duplicate triplets.
@@ -78,6 +78,7 @@ def threeSum(nums):
                     then when l=i+1 and all values of r, l=i+2 and all values of r, 
                     both set of solutions are equal
                     thus when nums[l]==nums[l-1] , we will increase l till l<r
+                    the value of r is autocalculated as per the triplet value
                     '''
                     l+=1
                     while nums[l]==nums[l-1] and l<r:

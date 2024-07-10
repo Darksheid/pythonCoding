@@ -28,13 +28,16 @@ if not store it, if present then return the value
 As there is only one solution , and there is no case for no solution
 '''
 
-def twoSum(nums,target):
-    dp={}
-    for i,n in enumerate(nums):
-        diff= target- n
-        if diff in dp : return [dp[diff],i]
+
+def twoSum(nums, target):
+    dp = {}
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in dp:
+            return [dp[diff], i]
         dp[n] = i
 
-nums=[4,5,6]
-target=10
-print(twoSum(nums,target))
+
+nums = [4, 5, 6]
+target = 10
+print(twoSum(nums, target))

@@ -26,8 +26,7 @@ def longestPalindrome(s):
         substr = ""
         dp = [[False] * n for _ in range(n)]
         '''
-        # this dp table will hold true/False value if s[i..j] is Palindrome
-
+        # this dp table will hold true/False value if s[i..j] is Palindrome where i is starting pos and j is ending
         # base case when single char is there in the String s[i..i]=s[i]
         '''
         for k in range(n):
@@ -36,7 +35,7 @@ def longestPalindrome(s):
         for i in range(n - 1, -1, -1):
             for j in range(n - 1, -1, -1):
                 '''
-                # eliminate cases when i>j
+                # eliminate cases when i>j ;j has to be greater or equal than i
                 # case when i==j is already calculated to be True
                 '''
                 if j > i:
@@ -59,5 +58,5 @@ def longestPalindrome(s):
 
         return substr
 
-s='babad'
+s='cddd'
 print(longestPalindrome(s))
